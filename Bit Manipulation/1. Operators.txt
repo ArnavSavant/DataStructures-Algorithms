@@ -1,0 +1,64 @@
+Binary Operators...
+
+1. AND operator (&)
+   -if all inputs are one(1) => 1
+   -if any one input is zero(0) => 0
+
+   eg: a=5(101), b=6(110) 
+       c = a & b
+      1 0 1
+    & 1 1 0
+    --------
+      1 0 0
+    --------
+      c = 100(4)
+   => 5 & 6 = 4
+   
+2. OR operator (|)
+   -if all inputs are zero(0) => 0
+   -if any one input is one(1) => 1
+
+   eg: a=5(101), b=6(110) 
+       c = a | b
+      1 0 1
+    & 1 1 0
+    --------
+      1 1 1
+    --------
+      c = 111(7)
+   => 5 & 6 = 7
+
+3. XOR operator (^)
+   -if even inputs are one(1) => 0
+   -if odd input are zero(0) => 1
+
+   eg: a=5(101), b=6(110) 
+       c = a ^ b
+      1 0 1
+    & 1 1 0
+    --------
+      0 1 1
+    --------
+      c = 011(3)
+   => 5 & 6 = 3
+
+4. Left-Shift operator (<<)
+   -it shifts the all the bits to the left by desired places and the excess bits towards the end topples over.
+
+   eg: a=5(101) 
+       c = a << 2
+       c = 1 _ _
+       c = 1 0 0(4)
+
+5. Right-Shift operator (<<)
+   -it shifts the all the bits to the right by desired places and the excess bits towards the end topples over.
+
+   eg: a=5(101) 
+       c = a >> 2
+       c = _ _ 1
+       c = 0 0 1(1)
+
+
+  
+
+

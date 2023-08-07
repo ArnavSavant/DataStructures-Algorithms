@@ -1,0 +1,63 @@
+To print all the permutations we have basically two approaches.
+
+Approach 1:
+For each index of a permutation we choose out of all elements. For example, for 1st index of our permutation we will have total 'n' elements to choose from. Once choosen, we move on to the next index and we have now 'n-1' elements left to choose from. In recursive approach, After choosing an elemnt for a particular index, we make the recursive call for choosing the next index, therefore after N options for 1st index, we make (N-1) options for our 2nd index and so on and so forth.
+We also keep an additional data structure which informs the recursive calls which elements are already choosen for the current permutation and which elements we can still add in our permutation.
+Since, there are n*(n-1)*(n-2)*(n-3)........*3*2*1 = n! permutations therefore the time complexity is n!*n 
+and Space Complexity is O(n)+O(n)
+
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        Map<Integer,Boolean> mp = new HashMap<Integer,Boolean>();
+        for(int i=0;i<nums.length;i++) {
+            mp.put(nums[i],false);
+        }
+        List<List<Integer>> ans = new ArrayList<>();
+        solve(nums,new ArrayList<>(),mp,ans);
+        return ans;
+    }
+    public void solve(int nums[], List<Integer> list, Map<Integer,Boolean> mp, List<List<Integer>> ans) {
+        if(list.size()==nums.length) {
+            ans.add(new ArrayList<>(list));
+            return;
+        }
+        for(int i=0;i<nums.length;i++) {
+            if(mp.get(nums[i])==false) {
+                list.add(nums[i]);
+                mp.put(nums[i],true);
+                solve(nums , list, mp, ans);
+                mp.put(list.get(list.size()-1),false);
+                list.remove(list.size()-1);
+            }
+        }
+    }
+---------------------------------------------------------------------------------------------------------------------------
+Approach 2: We keep the orignal permutation in a data structure and keep swapping all index with all index. Initially, the first index is swapped with all elements then the second element and so on and so forth.
+In the first recursive call, first index is swapped with all index and after each swapping, recursive calls are made to swap the second index till all permutations are generated.
+
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> answer = new ArrayList<>();
+        solve(0,nums,answer);
+        return answer;
+    }
+    public void solve(int ind, int nums[], List<List<Integer>> answer) {
+        if(ind==nums.length) {
+            List<Integer> list = new ArrayList<Integer>();
+            for(int i:nums) {
+                list.add(i);
+            }
+            answer.add(new ArrayList<>(list));
+            return;
+        }
+        for(int i=ind;i<nums.length;i++) {
+            int temp = nums[i];
+            nums[i]  = nums[ind];
+            nums[ind] = temp;
+            solve(ind+1,nums,answer);
+            temp = nums[i];
+            nums[i]  = nums[ind];
+            nums[ind] = temp;
+        }
+    }
+}

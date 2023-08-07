@@ -1,0 +1,11 @@
+We make the recursive call and then instead of returing the desired value, we store that value in a variable(parameter).
+We keep updating the value of the paramenter and when the base call is executed, we just print the value stored in the variable(parameter).
+
+function(i,sum) {
+   if(i<0) {
+      print(sum);
+      return;
+   }
+   sum = sum + arr[i]; //we carry this variable in every call
+   funtion(i-1,sum);
+}

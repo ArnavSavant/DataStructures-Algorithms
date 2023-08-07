@@ -1,0 +1,117 @@
+A subsequence is a continous or discountinous sequence which follows the orignal order
+To solve problems using this method, we henerally follow the "take/not take" approach which is index-based.
+For every index, we decide whether the element is to be included in the subsequence or not.
+Since, for every index we have 2 option so, the time complexity comes out to be 2^n and since every secuence need to printed so that will take another 'n' complexity. So total time complexity ==> [(2^n)*n].
+The max stack size will be the height of the recursive tree. Space complexity ==> O(n)
+
+sample code:
+function(i,ds[]) {
+   if(i>=n) {
+      print(ds);
+      return;
+   }
+
+   // take or pick the particular condition, this element is added into our subsequence
+   ds.add(arr[i]);
+   function(i+1,ds);
+   ds.remove(arr[i]);
+
+   //not take or not pick condition, this element is not added into our subsequence
+   function(i+1,ds)
+}
+--------------------------------------------------------------------------------------------------------------------------------
+To print just a single subsequence, we need to avoid the future recursive calls.
+Thus we need to return from the recursive function call as soon as the desired answer is obtained. We need to modify the sample code as follows(Technique to print one answer only):
+
+function() {
+
+   if(base_condition == true) {
+      return true;
+   }
+   else {
+      return false;
+   }
+
+   // take or pick the particular condition, this element is added into our subsequence
+   if(function()==true) {
+      return true;
+   }
+
+   //not take or not pick condition, this element is not added into our subsequence
+   if(function()==true) {
+      return true;
+   }
+
+   return false;
+}
+
+In the above code, if a single function call returns true, the solution would be printed/returned otherwise if both the recursive calls return false, the function would return false stating that no solution exists.
+--------------------------------------------------------------------------------------------------------------------------------
+If we need to print/return the number of subsequenes that satisfies the given condition, then we need to follow the structure written below:
+
+function() {
+   base-condition {
+      return 1 ==> (condition) satisfies
+      return 0 ==> (condition) does not satisfies
+   }
+
+   // take or pick the particular condition, this element is added into our subsequence
+   x1 = function(); 
+
+   //not take or not pick condition, this element is not added into our subsequence
+   x2 = function();
+
+   return (x1 + x2);
+}
+
+In the above code, we are executing all recursive calls as we need the total number of subsequenes and not just a single solution.
+--------------------------------------------------------------------------------------------------------------------------------
+Sample Codes:
+
+Example 1: Single Element can be add to the subsequence number of times
+class Solution {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> solution = new ArrayList<List<Integer>>();
+        solve(0,target,new ArrayList<>(), candidates, solution);
+        return solution;
+    }
+    public void solve(int ind, int target, List<Integer> list, int arr[],List<List<Integer>> solution) {
+        if(ind==arr.length) {
+            if(target ==0) {
+                solution.add(new ArrayList<>(list));
+            }
+            return;
+        }
+        if(arr[ind]<=target) {
+            list.add(arr[ind]);
+            solve(ind,target-arr[ind],list,arr,solution);
+            list.remove(list.size()-1);
+        }
+
+        solve(ind+1,target,list,arr,solution);
+    }
+}
+
+Example 2: Single Element can be add to the subsequence only once
+class Solution {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        List<List<Integer>> solution = new ArrayList<List<Integer>>();
+        solve(0,target,new ArrayList<>(), candidates, solution);
+        return solution;
+    }
+    public void solve(int ind, int target, List<Integer> list, int arr[],List<List<Integer>> solution) {
+        if(ind==arr.length) {
+            if(target ==0) {
+                solution.add(new ArrayList<>(list));
+            }
+            return;
+        }
+        if(arr[ind]<=target) {
+            list.add(arr[ind]);
+            solve(ind+1,target-arr[ind],list,arr,solution);
+            list.remove(list.size()-1);
+        }
+
+        solve(ind+1,target,list,arr,solution);
+    }
+}

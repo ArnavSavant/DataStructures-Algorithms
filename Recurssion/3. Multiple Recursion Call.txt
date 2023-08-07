@@ -1,0 +1,9 @@
+We make multiple call to the recursive function instead of just one call.
+
+funtion(n) {
+   if(n<1) {
+      return 0;
+   }
+   else return f(n-1) + f(n-2);
+}
+

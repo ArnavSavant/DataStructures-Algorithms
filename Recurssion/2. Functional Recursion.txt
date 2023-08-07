@@ -1,0 +1,18 @@
+We make recursive call and we just keep returning from the function the value which will help in calculating the fiinal solution.
+We know f(n) is {(value) + f(n-1)} so we keep returning the value until base condition is executed and then we return a specific value which does not violate our final solution.
+
+function(n) {
+   if(n==0) {
+      return 0;
+   }
+    return n + f(n-1);
+}
+
+dry run:
+n=3
+
+f(3) => 3 + f(2) => 3 + 2 + f(1) => 3 + 2 + 1 +f(0);
+f(3) => 3 + f(2) => 3 + 2 + f(1) => 3 + 2 + 1 + 0;
+f(3) => 3 + f(2) => 3 + 2 + 1;
+f(3) => 3 + 3;
+f(3) => 6;
