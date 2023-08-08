@@ -1,5 +1,6 @@
 {
    "java.project.sourcePaths": [
+      "Stacks_",
       "Sorting Algorithms",
       "Sliding Window",
       "Searching Algorithms",
@@ -8,6 +9,6 @@
       "Greedy Technique",
       "Dynamic Programing",
       "Binary Search",
-      "Stacks_"
+      "Leetcode Practise"
    ]
 }
