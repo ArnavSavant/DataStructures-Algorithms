@@ -1,4 +1,4 @@
-public class Solution_1752 {
+public class Leetcode_1752 {
    public boolean check(int nums[]) {
       int count = 0; //how many places the array is not sorted
       // a sorted rotated array would be un-sorted at exactly one place.

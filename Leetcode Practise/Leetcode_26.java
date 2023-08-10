@@ -1,4 +1,4 @@
-public class Solution_26 {
+public class Leetcode_26 {
    public int removeDuplicates(int[] nums) {
       if(nums.length == 1) {
          return 1;
