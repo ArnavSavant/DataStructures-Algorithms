@@ -71,4 +71,6 @@ BINARY SEARCH
 14. peak element [1]
 15. search in a nearl sorted array [1]
 16. search in rotated sorted array [1]
+17. lower bound implementation
+18. upper bound implementation
  
