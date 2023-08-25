@@ -1,75 +1,55 @@
 /* Java program for Merge Sort */
+
+import java.util.ArrayList;
+
 public class MergeSort
 {
 	// Merges two subarrays of arr[].
 	// First subarray is arr[l..m]
 	// Second subarray is arr[m+1..r]
-	void merge(int arr[], int l, int m, int r)
-	{
-		// Find sizes of two subarrays to be merged
-		int n1 = m - l + 1;
-		int n2 = r - m;
+	    private static void merge(int[] arr, int low, int mid, int high) {
+        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
+        int left = low;      // starting index of left half of arr
+        int right = mid + 1;   // starting index of right half of arr
 
-		/* Create temp arrays */
-		int L[] = new int[n1];
-		int R[] = new int[n2];
+        //storing elements in the temporary array in a sorted manner//
 
-		/*Copy data to temp arrays*/
-		for (int i = 0; i < n1; ++i)
-			L[i] = arr[l + i];
-		for (int j = 0; j < n2; ++j)
-			R[j] = arr[m + 1 + j];
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right]) {
+                temp.add(arr[left]);
+                left++;
+            } else {
+                temp.add(arr[right]);
+                right++;
+            }
+        }
 
-		/* Merge the temp arrays */
+        // if elements on the left half are still left //
 
-		// Initial indexes of first and second subarrays
-		int i = 0, j = 0;
+        while (left <= mid) {
+            temp.add(arr[left]);
+            left++;
+        }
 
-		// Initial index of merged subarray array
-		int k = l;
-		while (i < n1 && j < n2) {
-			if (L[i] <= R[j]) {
-				arr[k] = L[i];
-				i++;
-			}
-			else {
-				arr[k] = R[j];
-				j++;
-			}
-			k++;
-		}
+        //  if elements on the right half are still left //
+        while (right <= high) {
+            temp.add(arr[right]);
+            right++;
+        }
 
-		/* Copy remaining elements of L[] if any */
-		while (i < n1) {
-			arr[k] = L[i];
-			i++;
-			k++;
-		}
+        // transfering all elements from temporary to arr //
+        for (int i = low; i <= high; i++) {
+            arr[i] = temp.get(i - low);
+        }
+    }
 
-		/* Copy remaining elements of R[] if any */
-		while (j < n2) {
-			arr[k] = R[j];
-			j++;
-			k++;
-		}
-	}
-
-	// Main function that sorts arr[l..r] using
-	// merge()
-	void sort(int arr[], int l, int r)
-	{
-		if (l < r) {
-			// Find the middle point
-			int m =l+ (r-l)/2;
-
-			// Sort first and second halves
-			sort(arr, l, m);
-			sort(arr, m + 1, r);
-
-			// Merge the sorted halves
-			merge(arr, l, m, r);
-		}
-	}
+    public static void mergeSort(int[] arr, int low, int high) {
+        if (low >= high) return;
+        int mid = (low + high) / 2 ;
+        mergeSort(arr, low, mid);  // left half
+        mergeSort(arr, mid + 1, high); // right half
+        merge(arr, low, mid, high);  // merging sorted halves
+    }
 
 	/* A utility function to print array of size n */
 	static void printArray(int arr[])
@@ -88,8 +68,7 @@ public class MergeSort
 		System.out.println("Given Array");
 		printArray(arr);
 
-		MergeSort ob = new MergeSort();
-		ob.sort(arr, 0, arr.length - 1);
+		mergeSort(arr, 0, arr.length - 1);
 
 		System.out.println("\nSorted array");
 		printArray(arr);
