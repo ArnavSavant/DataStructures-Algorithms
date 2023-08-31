@@ -49,8 +49,6 @@ public class PaintersPartitions {
 }
 
 /*
-Certainly, Professor ChatGPT is here to enlighten! The provided code is a solution to a classic optimization problem often known as **The Painter's Partition Problem**. Let's dive deep into the explanation:
-
 ### **Problem Statement**:
 Given an array (representing lengths of boards) and an integer `k` (number of painters), find the minimum time required to paint all the boards under the constraint that any painter will only paint contiguous boards. The time taken by a painter to paint a board is equal to its length. 
 
