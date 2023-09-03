@@ -11,6 +11,8 @@
       "Dynamic Programing",
       "Bit Manipulation",
       "Binary Search",
-      "Arrays"
-   ]
+      "Arrays",
+      "Data Structures"
+   ],
+   "java.debug.settings.onBuildFailureProceed": true
 }
