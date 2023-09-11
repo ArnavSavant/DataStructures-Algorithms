@@ -11,16 +11,12 @@ public class CountSort {
          count[arr[i]]++; // counting array elements
       }
       int k = 0;
-      // int step=0;
       for (int i = 0; i <= max; i++) {
-         // step++;
          while (count[i] > 0) {
             arr[k++] = i;
             count[i]--;
-            // step++;
          }
       }
-      // System.out.println(step);
    }
 
    public int findMaximum(int arr[], int n) {
