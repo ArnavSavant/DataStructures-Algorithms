@@ -30,12 +30,36 @@ public class Leetcode_8 {
 
         return x.intValue();
     }
+    /*
+    RECURRSIVE IMPLEMENTATION
+    public int solve(String s, boolean signFound, boolean isNegative) {
+        if (s.isEmpty() || (!Character.isDigit(s.charAt(0)) && (s.charAt(0) != '+' && s.charAt(0) != '-'))) {
+            return 0;
+        }
+        if (signFound && (s.charAt(0) == '+' || s.charAt(0) == '-')) {
+            return 0;
+        }
+        if (!signFound && (s.charAt(0) == '+' || s.charAt(0) == '-')) {
+            isNegative = (s.charAt(0) == '-') ? true : false;
+            signFound = true;
+            return solve(s.substring(1), signFound, isNegative);
+        }
 
-    public int solve(String s, int i) {
-        // if()
-
-        return 0;
+        int digit = s.charAt(0) - '0';
+        int nextValue = solve(s.substring(1), signFound, isNegative);
+        System.out.println("values: " + s.charAt(0) + " " + digit + " " + nextValue);
+        long result = isNegative ? -digit : digit;
+        result = result * (long) Math.pow(10, (int) Math.log10(nextValue + 1)) + nextValue;
+        System.out.println("result: " + result);
+        if (result < Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        } else if (result > Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        } else {
+            return (int) result;
+        }
     }
+    */
 }
 
 /*

@@ -31,6 +31,7 @@ class Solution {
             }
         }
     }
+}
 ---------------------------------------------------------------------------------------------------------------------------
 Approach 2: We keep the orignal permutation in a data structure and keep swapping all index with all index. Initially, the first index is swapped with all elements then the second element and so on and so forth.
 In the first recursive call, first index is swapped with all index and after each swapping, recursive calls are made to swap the second index till all permutations are generated.

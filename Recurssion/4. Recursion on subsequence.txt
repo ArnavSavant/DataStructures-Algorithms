@@ -1,7 +1,7 @@
 A subsequence is a continous or discountinous sequence which follows the orignal order
 To solve problems using this method, we henerally follow the "take/not take" approach which is index-based.
 For every index, we decide whether the element is to be included in the subsequence or not.
-Since, for every index we have 2 option so, the time complexity comes out to be 2^n and since every secuence need to printed so that will take another 'n' complexity. So total time complexity ==> [(2^n)*n].
+Since, for every index we have 2 option so, the time complexity comes out to be 2^n and since every sequence needs to be printed so that will take another 'n' complexity. So total time complexity ==> [(2^n)*n].
 The max stack size will be the height of the recursive tree. Space complexity ==> O(n)
 
 sample code:
