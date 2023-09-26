@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SubsetSum {
+public class SubsetSum1 {
     public static ArrayList<Integer> subsetSum(int num[]) {
         ArrayList<Integer> ans = new ArrayList<Integer>();
         solve(num, ans, 0, 0);

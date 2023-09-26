@@ -9,10 +9,11 @@
       "Important Algorithms",
       "Greedy Technique",
       "Dynamic Programing",
+      "Data Structures",
       "Bit Manipulation",
       "Binary Search",
       "Arrays",
-      "Data Structures"
+      "Stacks and Queues"
    ],
    "java.debug.settings.onBuildFailureProceed": true
 }

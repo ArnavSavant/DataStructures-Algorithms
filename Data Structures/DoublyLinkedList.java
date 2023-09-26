@@ -84,5 +84,11 @@ public class DoublyLinkedList {
 
         list.deleteFromEnd();
         list.printList();
+
+        list.insertAtEnd(4);
+        list.printList();
+
+        list.deleteFromBeginning();
+        list.printList();
     }
 }
