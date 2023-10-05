@@ -1,4 +1,4 @@
-public class SubsetSum {
+public class SubsetSum2 {
   // Recursive code
   // public boolean subsetsum(int arr[], int sum, int n) {
   //   if (sum == 0) {
@@ -35,7 +35,7 @@ public class SubsetSum {
   }
 
   public static void main(String[] args) {
-    SubsetSum obj = new SubsetSum();
+    SubsetSum2 obj = new SubsetSum2();
     int arr[] = { 2, 3, 5, 8, 9, 11 };
     System.out.println(obj.subsetsum(arr, 10, arr.length));
   }
