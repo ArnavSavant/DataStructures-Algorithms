@@ -26,7 +26,7 @@ public class QuickSort {
          }
          i++;
       }
-      printArray(arr);
+      // printArray(arr);
       return j - 1;
    }
 

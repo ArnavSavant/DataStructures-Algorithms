@@ -1,16 +1,16 @@
 public class SubsetSum2 {
   // Recursive code
   // public boolean subsetsum(int arr[], int sum, int n) {
-  //   if (sum == 0) {
-  //     return true;
-  //   }
-  //   if (n == 0) {
-  //     return false;
-  //   }
-  //   if (arr[n - 1] > sum) {
-  //     return subsetsum(arr, sum, n - 1);
-  //   }
-  //   return subsetsum(arr, sum - arr[n - 1], n - 1) || subsetsum(arr, sum, n - 1);
+  // if (sum == 0) {
+  // return true;
+  // }
+  // if (n == 0) {
+  // return false;
+  // }
+  // if (arr[n - 1] > sum) {
+  // return subsetsum(arr, sum, n - 1);
+  // }
+  // return subsetsum(arr, sum - arr[n - 1], n - 1) || subsetsum(arr, sum, n - 1);
   // }
 
   // DP Solution
