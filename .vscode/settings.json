@@ -1,6 +1,6 @@
 {
    "java.project.sourcePaths": [
-      "Stacks_",
+      "Stacks and Queues",
       "Sorting Algorithms",
       "Sliding Window",
       "Searching Algorithms",
@@ -13,7 +13,7 @@
       "Bit Manipulation",
       "Binary Search",
       "Arrays",
-      "Stacks and Queues"
+      "Heaps"
    ],
    "java.debug.settings.onBuildFailureProceed": true
 }

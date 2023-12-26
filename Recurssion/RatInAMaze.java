@@ -44,7 +44,7 @@ public class RatInAMaze {
 
    public static void main(String[] args) {
       RatInAMaze obj = new RatInAMaze();
-      int m[][] = { { 0, 1, 1, 1 },
+      int m[][] = { { 1, 1, 1, 1 },
             { 1, 1, 1, 0 },
             { 1, 0, 1, 1 },
             { 0, 0, 1, 1 } };

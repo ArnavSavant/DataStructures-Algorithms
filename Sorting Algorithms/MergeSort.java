@@ -1,5 +1,3 @@
-/* Java program for Merge Sort */
-
 import java.util.ArrayList;
 
 public class MergeSort
@@ -24,20 +22,20 @@ public class MergeSort
             }
         }
 
-        // if elements on the left half are still left //
+        // if elements on the left half are still left
 
         while (left <= mid) {
             temp.add(arr[left]);
             left++;
         }
 
-        //  if elements on the right half are still left //
+        //  if elements on the right half are still left
         while (right <= high) {
             temp.add(arr[right]);
             right++;
         }
 
-        // transfering all elements from temporary to arr //
+        // transfering all elements from temporary to arr
         for (int i = low; i <= high; i++) {
             arr[i] = temp.get(i - low);
         }
