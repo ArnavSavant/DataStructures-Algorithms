@@ -6,6 +6,7 @@
       "Searching Algorithms",
       "Recurssion",
       "Leetcode Practise",
+      "JAVA lab",
       "Important Algorithms",
       "Heaps",
       "Greedy Technique",
@@ -14,7 +15,7 @@
       "Bit Manipulation",
       "Binary Search",
       "Arrays",
-      "JAVA lab"
+      "Tree"
    ],
    "java.debug.settings.onBuildFailureProceed": true
 }
