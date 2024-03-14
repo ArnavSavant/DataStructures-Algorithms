@@ -1,21 +1,22 @@
 {
    "java.project.sourcePaths": [
+      "Tree",
       "Stacks and Queues",
       "Sorting Algorithms",
       "Sliding Window",
       "Searching Algorithms",
       "Recurssion",
       "Leetcode Practise",
-      "JAVA lab",
       "Important Algorithms",
       "Heaps",
       "Greedy Technique",
+      "Graph",
       "Dynamic Programing",
       "Data Structures",
       "Bit Manipulation",
       "Binary Search",
       "Arrays",
-      "Tree"
+      "JAVA lab"
    ],
    "java.debug.settings.onBuildFailureProceed": true
 }

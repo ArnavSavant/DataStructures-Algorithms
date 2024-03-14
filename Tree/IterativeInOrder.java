@@ -14,12 +14,12 @@ public class IterativeInOrder {
     }
 
     public void createBinaryTree() {
-        TreeNode first = new TreeNode(1);
+        TreeNode first = new TreeNode(4);
         TreeNode second = new TreeNode(2);
-        TreeNode third = new TreeNode(3);
-        TreeNode fourth = new TreeNode(4);
-        TreeNode fifth = new TreeNode(5);
-        TreeNode sixth = new TreeNode(6);
+        TreeNode third = new TreeNode(6);
+        TreeNode fourth = new TreeNode(1);
+        TreeNode fifth = new TreeNode(3);
+        TreeNode sixth = new TreeNode(5);
         TreeNode seventh = new TreeNode(7);
 
         root = first; // null<----root---->null

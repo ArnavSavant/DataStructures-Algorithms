@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Leetcode_22422 {
+public class Leetcode_242 {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
