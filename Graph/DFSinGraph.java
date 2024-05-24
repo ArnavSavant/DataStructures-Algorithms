@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
 public class DFSinGraph {
-    public static void dfs_util(ArrayList<ArrayList<Integer>> graph, ArrayList<Integer> list, boolean visit[],
-            int curr) {
+    public static void dfs_util(ArrayList<ArrayList<Integer>> graph, ArrayList<Integer> list, boolean visit[], int curr) {
         visit[curr] = true;
         list.add(curr);
 

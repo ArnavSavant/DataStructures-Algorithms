@@ -74,5 +74,4 @@ public class PrintShortestPath {
         int destination = 4;
         obj.printShortestPath(edge, vertices, edges, source, destination);
     }
-
 }

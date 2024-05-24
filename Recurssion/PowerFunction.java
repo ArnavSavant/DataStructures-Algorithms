@@ -21,8 +21,6 @@ public class PowerFunction {
 
     public static void main(String[] args) {
         PowerFunction obj = new PowerFunction();
-        System.out.println("value of 6 to the power 75 is " + obj.myPow(6.0, 8));
-        System.out.println("Arnav Savant");
-        System.out.println("21BCS2769");
+        System.out.println("value of 6 to the power 8 is " + obj.myPow(6.0, 8));
     }
 }
