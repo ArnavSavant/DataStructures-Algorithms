@@ -1,24 +1,26 @@
-public class PrintLongestCommonSubsequence {
-   
-   //recurssive code
-   // public String printLongestCommonSubsequence(String a, String b, int m, int n) {
-   //    if(n==0 || m==0) {
-   //       return "";
-   //    }
-   //    if(a.charAt(m-1) == b.charAt(n-1)) {
-   //       return printLongestCommonSubsequence(a, b, m-1, n-1)+a.charAt(m-1);
-   //    }
-   //    else {
-   //       if(printLongestCommonSubsequence(a, b, m-1, n).length()>printLongestCommonSubsequence(a, b, m, n-1).length()) {
-   //          return printLongestCommonSubsequence(a, b, m-1, n);
-   //       }
-   //       else {
-   //          return printLongestCommonSubsequence(a, b, m, n-1);
-   //       }
-   //    }
+public class PrintLongestCommonSubsequence1 {
+
+   // recurssive code
+   // public String printLongestCommonSubsequence(String a, String b, int m, int n)
+   // {
+   // if(n==0 || m==0) {
+   // return "";
+   // }
+   // if(a.charAt(m-1) == b.charAt(n-1)) {
+   // return printLongestCommonSubsequence(a, b, m-1, n-1)+a.charAt(m-1);
+   // }
+   // else {
+   // if(printLongestCommonSubsequence(a, b, m-1,
+   // n).length()>printLongestCommonSubsequence(a, b, m, n-1).length()) {
+   // return printLongestCommonSubsequence(a, b, m-1, n);
+   // }
+   // else {
+   // return printLongestCommonSubsequence(a, b, m, n-1);
+   // }
+   // }
    // }
 
-   //DP approach
+   // DP approach
    public int[][] longestCommonSubsequence(String a, String b, int m, int n) {
       int t[][] = new int[m + 1][n + 1];
       for (int i = 0; i <= m; i++) {
@@ -38,6 +40,7 @@ public class PrintLongestCommonSubsequence {
       }
       return t;
    }
+
    public String printLongestCommonSubsequence(String a, String b, int m, int n) {
       int t[][] = longestCommonSubsequence(a, b, m, n);
       int i = m;
@@ -60,7 +63,7 @@ public class PrintLongestCommonSubsequence {
    }
 
    public static void main(String[] args) {
-      PrintLongestCommonSubsequence obj = new PrintLongestCommonSubsequence();
+      PrintLongestCommonSubsequence1 obj = new PrintLongestCommonSubsequence1();
       String a = "abedhg";
       String b = "abcdrgh";
       System.out.println(obj.printLongestCommonSubsequence(a, b, a.length(), b.length()));

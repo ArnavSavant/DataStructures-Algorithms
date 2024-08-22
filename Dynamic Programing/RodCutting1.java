@@ -1,4 +1,4 @@
-public class RodCutting {
+public class RodCutting1 {
    public int rodCutting(int l, int val[], int length[]) {
       int t[][] = new int[val.length+1][l+1];
       for(int i=0;i<=val.length;i++) {
@@ -30,7 +30,7 @@ public class RodCutting {
       //    return Math.max(val[n-1]+rodCutting(l-length[n-1], val, length,n),rodCutting(l, val, length, n-1));
       // }
    public static void main(String[] args) {
-      RodCutting obj = new RodCutting();
+      RodCutting1 obj = new RodCutting1();
       int l=3;
       int length[]={1,2,3,4};
       int val[]={3,7,9,12};
