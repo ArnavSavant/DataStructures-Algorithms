@@ -10,7 +10,7 @@ public class LongestCommonSubsequence1 {
         // }
         // return memorization(text1, text2, n1 - 1, n2 - 1, dp);
 
-        return tabulation(text1, text2, n1, n2);
+        return spaceOptimized(text1, text2, n1, n2);
     }
 
     public int recursion(String text1, String text2, int ind1, int ind2) {
