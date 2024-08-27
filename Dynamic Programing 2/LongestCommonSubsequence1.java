@@ -10,7 +10,7 @@ public class LongestCommonSubsequence1 {
         // }
         // return memorization(text1, text2, n1 - 1, n2 - 1, dp);
 
-        return spaceOptimized(text1, text2, n1, n2);
+        return tabulation(text1, text2, n1, n2);
     }
 
     public int recursion(String text1, String text2, int ind1, int ind2) {
@@ -48,6 +48,12 @@ public class LongestCommonSubsequence1 {
                 }
             }
         }
+        for (int i = 0; i <= n1; i++) {
+            for (int j = 0; j <= n2; j++) {
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println("");
+        }
         return dp[n1][n2];
     }
 
@@ -67,5 +73,10 @@ public class LongestCommonSubsequence1 {
             }
         }
         return dp[n2];
+    }
+
+    public static void main(String[] args) {
+        LongestCommonSubsequence1 obj = new LongestCommonSubsequence1();
+        obj.longestCommonSubsequence("rabbbit", "rabbit");
     }
 }
