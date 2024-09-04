@@ -1,4 +1,4 @@
-public class LongestCommonSubstring {
+public class LongestCommonSubstring2 {
    public int longestCommonSubstring(String x, String y, int m, int n) {
       int t[][] = new int[m + 1][n + 1];
       for (int i = 0; i <= m; i++) {
@@ -32,7 +32,7 @@ public class LongestCommonSubstring {
    //    return res;
    // }
    public static void main(String[] args) {
-      LongestCommonSubstring obj = new LongestCommonSubstring();
+      LongestCommonSubstring2 obj = new LongestCommonSubstring2();
       String x = "abexymc";
       String y = "abdxyml";
       // System.out.println(obj.longestCommonSubstring(x, y, x.length(), y.length(),0));

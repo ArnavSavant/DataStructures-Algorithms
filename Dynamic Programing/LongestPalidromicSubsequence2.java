@@ -1,5 +1,5 @@
 //Longest Plaidromic Subsequence of a String is basically a LCS of that string and its reverse.
-public class LongestPalidromicSubsequence {
+public class LongestPalidromicSubsequence2 {
    //recursive code
    // public int longestPalidromicSubsequence(String a,int m,int n) {
    //    if(n==0) {
@@ -49,7 +49,7 @@ public class LongestPalidromicSubsequence {
       return t[m][n];
    }
    public static void main(String[] args) {
-      LongestPalidromicSubsequence obj = new LongestPalidromicSubsequence();
+      LongestPalidromicSubsequence2 obj = new LongestPalidromicSubsequence2();
       // String a="abdghdcba";
       String a="adbcbdha";
       System.out.println(obj.longestPalidromicSubsequence(a));
